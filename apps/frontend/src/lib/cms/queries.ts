@@ -21,6 +21,16 @@ export const homePageQuery = `
 				description,
 				image
 			},
+			_type == "casesSection" => {
+				eyebrow,
+				heading,
+				subheading,
+				cases[]->{
+					_id,
+					title,
+					summary,
+				}
+			},
 		},
 	}
 `;

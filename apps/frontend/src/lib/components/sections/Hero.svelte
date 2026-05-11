@@ -18,7 +18,7 @@
 		color: var(--color-on-black);
 		padding-block: var(--section-spacing-xl);
 
-		border: 1px solid var(--border-color);
+		border: 1px solid var(--color-border);
 
 		.hero__inner {
 			display: flex;

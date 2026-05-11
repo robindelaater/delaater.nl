@@ -1,14 +1,16 @@
 <script>
+	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
+
 	const { section } = $props();
 </script>
 
 <section class="services">
 	<div class="container services__inner">
-		<div class="services__content">
-			<div class="eyebrow">{section.eyebrow}</div>
-			<h2>{section.heading}</h2>
-			<div class="subheading">{section.subheading}</div>
-		</div>
+		<SectionHeader
+			eyebrow={section.eyebrow}
+			heading={section.heading}
+			subheading={section.subheading}
+		/>
 
 		<ul class="services__list">
 			{#each section.services as service, index (index)}
@@ -30,12 +32,6 @@
 			@media (min-width: 768px) {
 				grid-template-columns: 1fr 1fr;
 			}
-		}
-
-		.services__content {
-			display: flex;
-			flex-direction: column;
-			gap: var(--spacing-sm);
 		}
 
 		.services__list {

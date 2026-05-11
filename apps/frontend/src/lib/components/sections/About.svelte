@@ -1,5 +1,6 @@
 <script>
 	import SanityImage from '$lib/components/cms/SanityImage.svelte';
+	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
 
 	const { section } = $props();
 </script>
@@ -10,17 +11,21 @@
 			<SanityImage source={section.image} width={400} alt={section.heading} />
 		</div>
 
-		<div class="section-header">
-			<div class="eyebrow">{section.eyebrow}</div>
-			<h2>{section.heading}</h2>
-			<div class="subheading">{section.description}</div>
-		</div>
+		<SectionHeader
+			eyebrow={section.eyebrow}
+			heading={section.heading}
+			subheading={section.description}
+		/>
 	</div>
 </section>
 
 <style>
 	.about {
 		padding-block: var(--section-spacing-xl);
+		background-image: url('/rectangle.svg');
+		background-size: 50px;
+		border-top: 1px solid var(--color-border);
+		border-bottom: 1px solid var(--color-border);
 
 		.about__inner {
 			display: flex;
@@ -41,7 +46,7 @@
 			}
 		}
 
-		.subheading {
+		:global .subheading {
 			max-width: 100ch;
 		}
 	}

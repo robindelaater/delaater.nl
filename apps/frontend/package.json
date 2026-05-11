@@ -34,6 +34,7 @@
 	},
 	"dependencies": {
 		"@sanity/image-url": "^2.1.1",
+		"@sveltejs/adapter-cloudflare": "^7.2.8",
 		"sass-embedded": "^1.99.0"
 	}
 }
