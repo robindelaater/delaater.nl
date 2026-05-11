@@ -5,3 +5,14 @@
 
 	padding-inline: var(--spacing-xs);
 }
+
+.container--sm {
+	max-width: calc(var(--screen-lg) - var(--spacing-base) * 15);
+}
+
+.section-header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--spacing-sm);
+}

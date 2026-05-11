@@ -15,6 +15,12 @@ export const homePageQuery = `
 				subheading,
 				services[]
 			},
+			_type == "aboutSection" => {
+				eyebrow,
+				heading,
+				description,
+				image
+			},
 		},
 	}
 `;
