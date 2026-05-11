@@ -1,0 +1,140 @@
+:root {
+	/* Colors */
+	--color-white-500: #ffffff;
+
+	--color-black-100: #e8e9e8;
+	--color-black-200: #d2d3d3;
+	--color-black-300: #777b7a;
+	--color-black-400: #494f4d;
+	--color-black-500: #1c2321;
+
+	--color-green-100: #d3dad9;
+	--color-green-200: #a8b4b3;
+	--color-green-300: #7c8f8d;
+	--color-green-400: #516967;
+	--color-green-500: #254441;
+	--color-green-600: #1e3634;
+	--color-green-700: #162927;
+	--color-green-800: #0f1b1a;
+
+	--color-orange-100: #fce0d1;
+	--color-orange-200: #fac1a3;
+	--color-orange-300: #f7a275;
+	--color-orange-400: #f58347;
+	--color-orange-500: #f26419;
+	--color-orange-600: #c25014;
+	--color-orange-700: #913c0f;
+	--color-orange-800: #61280a;
+	--color-orange-900: #301405;
+	--color-orange-950: #180a03;
+
+	--color-yellow-100: #fff7e4;
+	--color-yellow-200: #fff0c9;
+	--color-yellow-300: #ffe8ae;
+	--color-yellow-400: #ffcc4b;
+	--color-yellow-500: #ffbf1e;
+	--color-yellow-600: #cc9918;
+	--color-yellow-700: #5c450b;
+	--color-yellow-800: #3d2e07;
+	--color-yellow-900: #1f1704;
+	--color-yellow-950: #0f0b02;
+
+	--color-white: var(--color-white-500);
+	--color-on-white: var(--color-black-500);
+	--color-black: var(--color-black-500);
+	--color-on-black: var(--color-white-500);
+
+	--color-primary: var(--color-yellow-500);
+	--color-primary-hover: var(--color-yellow-100);
+	--color-on-primary: var(--color-yellow-100);
+	--color-on-primary-hover: var(--color-yellow-500);
+
+	--color-secondary: var(--color-orange-500);
+	--color-secondary-hover: var(--color-orange-100);
+	--color-on-secondary: var(--color-orange-100);
+	--color-on-secondary-hover: var(--color-orange-500);
+
+	--color-tertiary: var(--color-green-500);
+	--color-on-tertiary: var(--color-green-100);
+
+	/* Screen sizes */
+	--screen-sm: 390px;
+	--screen-md: 768px;
+	--screen-lg: 1440px;
+
+	/* Spacings */
+	--spacing-base: 1rem;
+	--spacing-3xs: 0.125rem;
+	--spacing-2xs: 0.25rem;
+	--spacing-xs: 0.5rem;
+	--spacing-sm: var(--spacing-base);
+	--spacing-md: 1.5rem;
+	--spacing-lg: 2rem;
+	--spacing-xl: 2.5rem;
+	--spacing-2xl: 3rem;
+	--spacing-3xl: 3.5rem;
+
+	--section-spacing-xs: var(--spacing-md);
+	--section-spacing-sm: var(--spacing-md);
+	--section-spacing-md: var(--spacing-2xl);
+	--section-spacing-lg: calc(var(--spacing-base) * 4);
+	--section-spacing-xl: calc(var(--spacing-base) * 4);
+	--section-spacing-2xl: calc(var(--spacing-base) * 6);
+
+	--border-color: rgba(210, 211, 211, 0.25);
+
+	/* Fonts */
+	--font-family-base: 'Nunito', sans-serif;
+	--font-family-heading: 'JetBrains Mono', monospace;
+
+	/* Line heights */
+	--line-height-base: 1.6;
+	--line-height-heading: 1.1;
+
+	/* Font sizes */
+	--font-size-base: 1rem;
+	--font-size-body: var(--font-size-base);
+	--font-size-body-sm: calc(var(--font-size-base) * 0.875);
+	--font-size-body-lg: var(--font-size-base);
+
+	--font-size-h1: calc(var(--font-size-base) * 3);
+	--font-size-h2: calc(var(--font-size-base) * 2.5);
+	--font-size-h3: calc(var(--font-size-base) * 2);
+	--font-size-h4: calc(var(--font-size-base) * 1.5);
+	--font-size-h5: calc(var(--font-size-base) * 1.5);
+	--font-size-h6: calc(var(--font-size-base) * 1.25);
+
+	@media (min-width: 768px) {
+		--section-spacing-xs: var(--spacing-md);
+		--section-spacing-sm: var(--spacing-lg);
+		--section-spacing-md: var(--spacing-2xl);
+		--section-spacing-lg: calc(var(--spacing-base) * 4);
+		--section-spacing-xl: calc(var(--spacing-base) * 4);
+		--section-spacing-2xl: calc(var(--spacing-base) * 8);
+
+		--font-size-body-lg: calc(var(--font-size-base) * 1.125);
+
+		--font-size-h1: calc(var(--font-size-base) * 4);
+		--font-size-h2: calc(var(--font-size-base) * 3);
+		--font-size-h3: calc(var(--font-size-base) * 2.5);
+		--font-size-h4: calc(var(--font-size-base) * 2);
+		--font-size-h5: calc(var(--font-size-base) * 1.5);
+		--font-size-h6: calc(var(--font-size-base) * 1.25);
+	}
+
+	@media (min-width: 1440px) {
+		--section-spacing-xs: var(--spacing-xl);
+		--section-spacing-sm: var(--spacing-2xl);
+		--section-spacing-md: var(--spacing-3xl);
+		--section-spacing-lg: calc(var(--spacing-base) * 5);
+		--section-spacing-xl: calc(var(--spacing-base) * 8);
+		--section-spacing-2xl: calc(var(--spacing-base) * 16);
+
+		--font-size-h1: calc(var(--font-size-base) * 5.5);
+		--font-size-h2: calc(var(--font-size-base) * 4);
+		--font-size-h3: calc(var(--font-size-base) * 3);
+		--font-size-h4: calc(var(--font-size-base) * 2.5);
+		--font-size-h5: calc(var(--font-size-base) * 2);
+		--font-size-h6: calc(var(--font-size-base) * 1.5);
+	}
+}
