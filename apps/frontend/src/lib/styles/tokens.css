@@ -90,6 +90,7 @@
 	/* Line heights */
 	--line-height-base: 1.6;
 	--line-height-heading: 1.1;
+	--line-height-eyebrow: 1.1;;
 
 	/* Font sizes */
 	--font-size-base: 1rem;
@@ -103,6 +104,8 @@
 	--font-size-h4: calc(var(--font-size-base) * 1.5);
 	--font-size-h5: calc(var(--font-size-base) * 1.5);
 	--font-size-h6: calc(var(--font-size-base) * 1.25);
+	--font-size-eyebrow: calc(var(--font-size-base) * 0.825);
+	--font-size-subheading: calc(var(--font-size-base) * 1.25);
 
 	@media (min-width: 768px) {
 		--section-spacing-xs: var(--spacing-md);
@@ -120,6 +123,7 @@
 		--font-size-h4: calc(var(--font-size-base) * 2);
 		--font-size-h5: calc(var(--font-size-base) * 1.5);
 		--font-size-h6: calc(var(--font-size-base) * 1.25);
+		--font-size-subheading: calc(var(--font-size-base) * 1.5);
 	}
 
 	@media (min-width: 1440px) {

@@ -8,7 +8,13 @@ export const homePageQuery = `
 			_type == "heroSection" => {
 				heading,
 				subheading
-			}
+			},
+			_type == "servicesSection" => {
+				eyebrow,
+				heading,
+				subheading,
+				services[]
+			},
 		},
 	}
 `;

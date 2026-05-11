@@ -5,7 +5,7 @@
 <section class="hero">
 	<div class="container hero__inner">
 		<h1 class="heading">{section.heading}</h1>
-		<div class="subheading">{section.subheading}</div>
+		<div class="description">{section.subheading}</div>
 	</div>
 </section>
 
@@ -33,7 +33,7 @@
 				max-width: 1144px;
 			}
 
-			.subheading {
+			.description {
 				max-width: 50ch;
 			}
 		}

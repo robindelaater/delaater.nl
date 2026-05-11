@@ -39,3 +39,15 @@ h5, .h5 {
 h6, .h6 {
 	font-size: var(--font-size-h6);
 }
+
+.subheading {
+	font-size: var(--font-size-subheading);
+	font-family: var(--font-family-heading);
+}
+
+.eyebrow {
+	font-size: var(--font-size-eyebrow);
+	line-height: var(--line-height-eyebrow);
+	font-family: var(--font-family-heading);
+	text-transform: uppercase;
+}

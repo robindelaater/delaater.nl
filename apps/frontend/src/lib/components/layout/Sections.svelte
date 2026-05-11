@@ -1,10 +1,12 @@
 <script lang="ts">
 	import Hero from '../sections/Hero.svelte';
+	import Services from '../sections/Services.svelte';
 
 	const { sections = [] } = $props();
 
 	const components: Record<string, typeof Hero> = {
-		heroSection: Hero
+		heroSection: Hero,
+		servicesSection: Services
 	};
 </script>
 
