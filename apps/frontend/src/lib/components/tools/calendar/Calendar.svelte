@@ -21,11 +21,16 @@
 	let totalDaysInMonth = $state(new Date(year, month + 1, 0).getDate());
 	let currentDay = $state(new Date().getDate());
 	let disabledDays = $state([]);
+	let daysInPast = $state([]);
+	let startOffset = $state((new Date(year, month, 1).getDay() + 6) % 7);
+	let prevMonthLastDay = $state(new Date(year, month, 0).getDate());
 
 	function getDisabledDates() {
 		for (let i = 1; i <= totalDaysInMonth; i++) {
 			const date = new Date(year, month, i);
-			if (date.getDay() === 0 || date.getDay() === 6) {
+			if (date < new Date(year, month, currentDay)) {
+				daysInPast.push(i);
+			} else if (date.getDay() === 0 || date.getDay() === 6) {
 				disabledDays.push(i);
 			}
 		}
@@ -72,16 +77,22 @@
 			<div class="grid-header">Zo</div>
 
 			{#each Array(totalDaysInMonth) as _, i (i)}
-				<button
-					class="grid-day {i === currentDay - 1 ? 'grid-day--current' : ''} {disabledDays.includes(
-						i + 4
-					)
-						? 'grid-day--disabled'
-						: ''}"
-					data-day={_}
-				>
-					{i + 1}
-				</button>
+				{#if daysInPast.includes(i + 1)}
+					<button class="grid-day grid-day--disabled" data-day={i + 1}>
+						{i + 1}
+					</button>
+				{:else if disabledDays.includes(i + 1)}
+					<button class="grid-day grid-day--disabled" data-day={i + 1}>
+						{i + 1}
+					</button>
+				{:else}
+					<button
+						class="grid-day {i === currentDay - 1 ? 'grid-day--current' : ''}"
+						data-day={i + 1}
+					>
+						{i + 1}
+					</button>
+				{/if}
 			{/each}
 		</div>
 	</div>
@@ -205,6 +216,11 @@
 
 				&.grid-day--disabled {
 					opacity: 0.5;
+					pointer-events: none;
+				}
+
+				&.grid-day--overflow {
+					opacity: 0.3;
 					pointer-events: none;
 				}
 			}

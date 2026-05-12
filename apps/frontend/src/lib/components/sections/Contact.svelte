@@ -1,6 +1,6 @@
 <script>
 	import SectionHeader from '../blocks/SectionHeader.svelte';
-	import Calendar from '../tools/calendar/Calendar.svelte';
+	import ContactForm from '../tools/forms/ContactForm.svelte';
 	import LinkButton from '../ui/LinkButton.svelte';
 
 	const { section } = $props();
@@ -25,7 +25,7 @@
 				{/if}
 			</div>
 
-			<Calendar />
+			<ContactForm />
 		</div>
 	</div>
 </section>
