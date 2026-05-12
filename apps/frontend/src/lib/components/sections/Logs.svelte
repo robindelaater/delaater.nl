@@ -39,7 +39,6 @@
 					</swiper-slide>
 				{/each}
 			</swiper-container>
-			<swiper-scrollbar></swiper-scrollbar>
 		</div>
 	</div>
 </section>
