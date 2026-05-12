@@ -14,7 +14,10 @@
 		const options = {
 			spaceBetween: 24,
 			breakpoints: {
-				390: {
+				0: {
+					slidesPerView: 1.2
+				},
+				567: {
 					slidesPerView: 2
 				},
 				1024: {
@@ -67,11 +70,6 @@
 						<BlogCard {...log} />
 					</swiper-slide>
 				{/each}
-				{#each section.logs as log (log._id)}
-					<swiper-slide>
-						<BlogCard {...log} />
-					</swiper-slide>
-				{/each}
 			</swiper-container>
 		</div>
 	</div>
@@ -108,6 +106,13 @@
 			:global .blog-card {
 				height: 100%;
 			}
+		}
+
+		swiper-container::part(scrollbar) {
+			--swiper-scrollbar-size: var(--spacing-xs);
+			--swiper-scrollbar-bottom: calc(-1 * var(--spacing-xl));
+			--swiper-scrollbar-bg-color: var(--color-primary-100);
+			--swiper-scrollbar-drag-bg-color: var(--color-primary);
 		}
 	}
 </style>
