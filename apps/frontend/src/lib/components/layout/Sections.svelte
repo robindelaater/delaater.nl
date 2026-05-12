@@ -3,6 +3,7 @@
 	import Services from '../sections/Services.svelte';
 	import Cases from '../sections/Cases.svelte';
 	import About from '../sections/About.svelte';
+	import Logs from '../sections/Logs.svelte';
 
 	const { sections = [] } = $props();
 
@@ -10,7 +11,8 @@
 		heroSection: Hero,
 		servicesSection: Services,
 		casesSection: Cases,
-		aboutSection: About
+		aboutSection: About,
+		logSection: Logs
 	};
 </script>
 

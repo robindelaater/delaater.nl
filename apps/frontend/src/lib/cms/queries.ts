@@ -31,6 +31,16 @@ export const homePageQuery = `
 					summary,
 				}
 			},
+			_type == "logSection" => {
+				eyebrow,
+				heading,
+				subheading,
+				logs[]->{
+					_id,
+					title,
+					summary
+				}
+			},
 		},
 	}
 `;

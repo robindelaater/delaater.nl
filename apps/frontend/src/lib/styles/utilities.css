@@ -3,7 +3,7 @@
 	width: 100%;
 	margin-inline: auto;
 
-	padding-inline: var(--spacing-xs);
+	padding-inline: var(--spacing-sm);
 }
 
 .container--sm {
