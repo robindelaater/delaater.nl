@@ -47,6 +47,16 @@
 		}
 	}
 
+	&.btn--light {
+		background: var(--color-white);
+		color: var(--color-on-white);
+
+		&:hover {
+			background: var(--color-white-hover);
+			color: var(--color-on-white-hover);
+		}
+	}
+
 	&.btn--icon {
 		display: flex;
 		align-items: center;

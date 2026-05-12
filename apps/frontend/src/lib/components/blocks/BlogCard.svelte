@@ -8,7 +8,7 @@
 	{/if}
 
 	<div class="blog-card__content">
-		<h3>{title}</h3>
+		<h5>{title}</h5>
 		<p>{summary}</p>
 	</div>
 </div>
