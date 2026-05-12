@@ -9,7 +9,9 @@
 
 	let { children } = $props();
 
-	onMount(register);
+	onMount(() => {
+		register();
+	});
 </script>
 
 <svelte:head>

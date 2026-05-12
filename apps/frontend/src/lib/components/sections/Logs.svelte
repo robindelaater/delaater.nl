@@ -3,6 +3,36 @@
 	import SectionHeader from '../blocks/SectionHeader.svelte';
 
 	const { section } = $props();
+
+	function initSwiper(target) {
+		const controls = target.closest('.logs').querySelector('.slider-controls');
+		const prevButton = controls.querySelector('.slider-control--prev');
+		const nextButton = controls.querySelector('.slider-control--next');
+
+		console.log(nextButton);
+
+		const options = {
+			spaceBetween: 24,
+			breakpoints: {
+				390: {
+					slidesPerView: 2
+				},
+				1024: {
+					slidesPerView: 3
+				},
+				1440: {
+					slidesPerView: 4
+				}
+			},
+			navigation: {
+				prevEl: prevButton,
+				nextEl: nextButton
+			},
+			scrollbar: true
+		};
+
+		Object.assign(target, options);
+	}
 </script>
 
 <section class="logs">
@@ -31,8 +61,12 @@
 		</div>
 
 		<div class="logs__slider-wrap">
-			<div class="logs__controls"></div>
-			<swiper-container slides-per-view="2" space-between="24">
+			<swiper-container {@attach initSwiper}>
+				{#each section.logs as log (log._id)}
+					<swiper-slide>
+						<BlogCard {...log} />
+					</swiper-slide>
+				{/each}
 				{#each section.logs as log (log._id)}
 					<swiper-slide>
 						<BlogCard {...log} />
@@ -62,6 +96,18 @@
 		.slider-controls {
 			display: flex;
 			gap: var(--spacing-xs);
+		}
+
+		swiper-container::part(container) {
+			overflow: visible !important;
+		}
+
+		swiper-slide {
+			height: auto !important;
+
+			:global .blog-card {
+				height: 100%;
+			}
 		}
 	}
 </style>
