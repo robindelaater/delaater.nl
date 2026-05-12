@@ -11,7 +11,7 @@
 
 <style>
 	.hero {
-		background: var(--color-black);
+		background: #000000;
 		background-image: url('/rectangle.svg');
 		background-size: 50px;
 

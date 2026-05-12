@@ -1,5 +1,6 @@
 <script>
 	import SectionHeader from '../blocks/SectionHeader.svelte';
+	import Calendar from '../tools/calendar/Calendar.svelte';
 	import LinkButton from '../ui/LinkButton.svelte';
 
 	const { section } = $props();
@@ -24,7 +25,7 @@
 				{/if}
 			</div>
 
-			<div class="contact-form"></div>
+			<Calendar />
 		</div>
 	</div>
 </section>
@@ -38,6 +39,7 @@
 			display: grid;
 			grid-template-columns: 1fr;
 			gap: var(--section-spacing-lg);
+			align-items: center;
 
 			@media (min-width: 768px) {
 				grid-template-columns: 1fr 1fr;

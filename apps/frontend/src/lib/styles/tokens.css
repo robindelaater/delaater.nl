@@ -51,6 +51,11 @@
 
 	--color-primary: var(--color-yellow-500);
 	--color-primary-100: var(--color-yellow-100);
+	--color-primary-200: var(--color-yellow-200);
+	--color-primary-300: var(--color-yellow-300);
+	--color-primary-400: var(--color-yellow-400);
+	--color-primary-500: var(--color-yellow-500);
+	--color-primary-600: var(--color-yellow-600);
 	--color-primary-hover: var(--color-yellow-100);
 	--color-on-primary: var(--color-yellow-100);
 	--color-on-primary-hover: var(--color-yellow-500);
