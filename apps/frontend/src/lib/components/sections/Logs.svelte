@@ -9,8 +9,6 @@
 		const prevButton = controls.querySelector('.slider-control--prev');
 		const nextButton = controls.querySelector('.slider-control--next');
 
-		console.log(nextButton);
-
 		const options = {
 			spaceBetween: 24,
 			breakpoints: {
@@ -70,6 +68,12 @@
 						<BlogCard {...log} />
 					</swiper-slide>
 				{/each}
+
+				{#each section.logs as log (log._id)}
+					<swiper-slide>
+						<BlogCard {...log} />
+					</swiper-slide>
+				{/each}
 			</swiper-container>
 		</div>
 	</div>
@@ -78,6 +82,8 @@
 <style>
 	.logs {
 		padding-block: var(--section-spacing-xl);
+		max-width: 100vw;
+		overflow: hidden;
 
 		.logs__inner {
 			display: flex;
