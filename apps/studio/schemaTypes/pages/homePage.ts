@@ -20,6 +20,7 @@ export const homePage = {
 				{ type: 'casesSection' },
 				{ type: 'aboutSection' },
 				{ type: 'logSection' },
+				{ type: 'contactSection' },
 			]
 		}),
   ],

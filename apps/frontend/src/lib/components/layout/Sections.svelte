@@ -4,6 +4,7 @@
 	import Cases from '../sections/Cases.svelte';
 	import About from '../sections/About.svelte';
 	import Logs from '../sections/Logs.svelte';
+	import Contact from '../sections/Contact.svelte';
 
 	const { sections = [] } = $props();
 
@@ -12,7 +13,8 @@
 		servicesSection: Services,
 		casesSection: Cases,
 		aboutSection: About,
-		logSection: Logs
+		logSection: Logs,
+		contactSection: Contact
 	};
 </script>
 

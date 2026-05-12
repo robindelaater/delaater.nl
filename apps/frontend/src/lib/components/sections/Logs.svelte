@@ -68,12 +68,6 @@
 						<BlogCard {...log} />
 					</swiper-slide>
 				{/each}
-
-				{#each section.logs as log (log._id)}
-					<swiper-slide>
-						<BlogCard {...log} />
-					</swiper-slide>
-				{/each}
 			</swiper-container>
 		</div>
 	</div>

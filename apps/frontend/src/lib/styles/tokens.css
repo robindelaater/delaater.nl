@@ -40,8 +40,10 @@
 	--color-yellow-950: #0f0b02;
 
 	--color-white: var(--color-white-500);
-	--color-on-white: var(--color-black-500);
 	--color-black: var(--color-black-500);
+	--color-black-hover: var(--color-black-400);
+	--color-on-black-hover: var(--color-white-500);
+	--color-on-white: var(--color-black-500);
 	--color-on-black: var(--color-white-500);
 
 	--color-primary: var(--color-yellow-500);

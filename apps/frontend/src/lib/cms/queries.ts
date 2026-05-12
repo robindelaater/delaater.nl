@@ -1,4 +1,3 @@
-
 export const homePageQuery = `
 	*[_type == 'homePage'] {
 		title,
@@ -39,6 +38,19 @@ export const homePageQuery = `
 					_id,
 					title,
 					summary
+				}
+			},
+			_type == "contactSection" => {
+				eyebrow,
+				heading,
+				subheading,
+				buttons[]{
+					_key,
+					variant,
+					label,
+					linkType,
+					internal,
+					external
 				}
 			},
 		},
