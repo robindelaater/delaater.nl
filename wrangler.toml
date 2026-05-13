@@ -7,6 +7,7 @@ compatibility_date = "2026-04-28"
 PUBLIC_SANITY_DATASET = "production"
 PUBLIC_SANITY_PROJECT_ID = "oz14vifj"
 PUBLIC_SANITY_STUDIO_URL = "https://delaater.sanity.studio"
+RESEND_API_KEY= "re_NMe7VQG8_2HRB5L81hJ5xXxMjmwQ5QCBH"
 
 [env.production]
 compatibility_flags = [ "nodejs_compat" ]
@@ -15,3 +16,4 @@ compatibility_flags = [ "nodejs_compat" ]
 PUBLIC_SANITY_DATASET = "production"
 PUBLIC_SANITY_PROJECT_ID = "oz14vifj"
 PUBLIC_SANITY_STUDIO_URL = "https://delaater.sanity.studio"
+RESEND_API_KEY= "re_NMe7VQG8_2HRB5L81hJ5xXxMjmwQ5QCBH"
