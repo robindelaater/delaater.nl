@@ -38,7 +38,7 @@
 
 		{#if page.form?.success}
 			<div class="field-group field-group--full">
-				<p>Dank voor je bericht, ik neem z.s.m. contact met je op.</p>
+				<p class="success-message">Dank voor je bericht, ik neem z.s.m. contact met je op!</p>
 			</div>
 		{/if}
 	</div>
@@ -82,6 +82,11 @@
 					grid-column: span 2;
 				}
 			}
+		}
+
+		.success-message {
+			color: var(--color-green-500);
+			font-weight: 600;
 		}
 	}
 </style>
