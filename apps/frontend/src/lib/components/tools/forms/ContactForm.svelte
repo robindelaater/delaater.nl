@@ -1,7 +1,9 @@
-<script>
+<script lang="ts">
+	import { enhance } from '$app/forms';
+	import { page } from '$app/state';
 </script>
 
-<form class="contact-form">
+<form class="contact-form" method="POST" action="/" use:enhance>
 	<div class="contact-form__header">
 		<h5>Plan een kennismaking</h5>
 		<p>
@@ -11,11 +13,11 @@
 
 	<div class="contact-form__fields">
 		<div class="field-group">
-			<input type="text" id="first_name" name="first_name" placeholder="Voornaam" />
+			<input type="text" id="first_name" name="first_name" placeholder="Voornaam" required />
 		</div>
 
 		<div class="field-group">
-			<input type="text" id="last_name" name="last_name" placeholder="Achternaam" />
+			<input type="text" id="last_name" name="last_name" placeholder="Achternaam" required />
 		</div>
 
 		<div class="field-group field-group--full">
@@ -23,27 +25,22 @@
 		</div>
 
 		<div class="field-group field-group--full">
-			<input type="email" id="email" name="email" placeholder="E-mail" />
+			<input type="email" id="email" name="email" placeholder="E-mail" required />
 		</div>
 
-		<div class="field-group">
-			<input
-				type="date"
-				id="date"
-				name="date"
-				placeholder="Datum"
-				min={new Date().toISOString().split('T')[0]}
-				class="input"
-			/>
-		</div>
-
-		<div class="field-group">
-			<input type="time" id="time" name="time" placeholder="Tijd" step="900" class="input" />
+		<div class="field-group field-group--full">
+			<input type="text" id="date" name="date" placeholder="Voorkeursdatum & tijd" />
 		</div>
 
 		<div class="field-group">
 			<button type="submit" class="btn btn--primary">Verzenden</button>
 		</div>
+
+		{#if page.form?.success}
+			<div class="field-group field-group--full">
+				<p>Dank voor je bericht, ik neem z.s.m. contact met je op.</p>
+			</div>
+		{/if}
 	</div>
 </form>
 
@@ -67,9 +64,14 @@
 		}
 
 		.contact-form__fields {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
+			display: flex;
+			flex-direction: column;
 			gap: var(--spacing-sm);
+
+			@media (min-width: 768px) {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+			}
 
 			.field-group {
 				display: flex;
