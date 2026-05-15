@@ -7,6 +7,7 @@ compatibility_date = "2026-05-11"
 "PUBLIC SANITY_DATASET" = "production"
 PUBLIC_SANITY_PROJECT_ID = "oz14vifj"
 PUBLIC_SANITY_STUDIO_URL = "https://delaater.sanity.studio"
+PUBLIC_TURNSTILE_SITE_KEY = "0x4AAAAAADOeMKwTgElHk9jI"
 SANITY_PREVIEW_SECRET = "abc"
 SANITY_VIEWER_TOKEN = "abc"
 
@@ -18,3 +19,4 @@ compatibility_flags = [ "nodejs_compat" ]
 PUBLIC_SANITY_DATASET = "production"
 PUBLIC_SANITY_PROJECT_ID = "oz14vifj"
 PUBLIC_SANITY_STUDIO_URL = "https://delaater.sanity.studio"
+PUBLIC_TURNSTILE_SITE_KEY = "0x4AAAAAADOeMKwTgElHk9jI"
