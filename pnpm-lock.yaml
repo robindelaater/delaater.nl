@@ -14,6 +14,9 @@ importers:
 
   apps/frontend:
     dependencies:
+      '@mac-barrett/svelte-recaptcha':
+        specifier: ^1.2.1
+        version: 1.2.1
       '@sanity/image-url':
         specifier: ^2.1.1
         version: 2.1.1
@@ -36,6 +39,9 @@ importers:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.3.0(jiti@2.7.0))
+      '@svelte-put/cloudflare-turnstile':
+        specifier: ^1.2.0
+        version: 1.2.0(svelte@5.55.5(@typescript-eslint/types@8.59.2))
       '@sveltejs/adapter-auto':
         specifier: ^7.0.1
         version: 7.0.1(@sveltejs/kit@2.59.1(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.55.5(@typescript-eslint/types@8.59.2))(vite@8.0.12(@types/node@24.12.3)(esbuild@0.27.7)(jiti@2.7.0)(sass-embedded@1.99.0)(sass@1.99.0)(tsx@4.21.0)(yaml@2.9.0)))(svelte@5.55.5(@typescript-eslint/types@8.59.2))(typescript@6.0.3)(vite@8.0.12(@types/node@24.12.3)(esbuild@0.27.7)(jiti@2.7.0)(sass-embedded@1.99.0)(sass@1.99.0)(tsx@4.21.0)(yaml@2.9.0)))
@@ -1868,6 +1874,9 @@ packages:
   '@lezer/lr@1.4.10':
     resolution: {integrity: sha512-rnCpTIBafOx4mRp43xOxDJbFipJm/c0cia/V5TiGlhmMa+wsSdoGmUN3w5Bqrks/09Q/D4tNAmWaT8p6NRi77A==}
 
+  '@mac-barrett/svelte-recaptcha@1.2.1':
+    resolution: {integrity: sha512-x1mKPTf1aS0IyX/dJKp7qb7iuNrvU7AXSGaM/Ypzk33cQIXjkuQAPjAYHGZmid8S3lJS1vmBFOP3dMVi7xf41w==}
+
   '@marijn/find-cluster-break@1.0.2':
     resolution: {integrity: sha512-l0h88YhZFyKdXIFNfSWpyjStDjGHwZ/U7iobcK1cQQD8sejsONdQtTVU+1wVN1PBw40PiiHB1vA5S7VTfQiP9g==}
 
@@ -2741,6 +2750,11 @@ packages:
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
+
+  '@svelte-put/cloudflare-turnstile@1.2.0':
+    resolution: {integrity: sha512-bm5zgKCBMbTrQCxX3u3rLiWaNFa6/B6juelE8Y8MriyaztxPg+ph5yS8WADMugEn3KmjN43QgcgsyHzPd2eCYg==}
+    peerDependencies:
+      svelte: ^5.1.0
 
   '@sveltejs/acorn-typescript@1.0.9':
     resolution: {integrity: sha512-lVJX6qEgs/4DOcRTpo56tmKzVPtoWAaVbL4hfO7t7NVwl9AAXzQR6cihesW1BmNMPl+bK6dreu2sOKBP2Q9CIA==}
@@ -8214,6 +8228,8 @@ snapshots:
     dependencies:
       '@lezer/common': 1.5.2
 
+  '@mac-barrett/svelte-recaptcha@1.2.1': {}
+
   '@marijn/find-cluster-break@1.0.2': {}
 
   '@mdit/plugin-alert@0.23.2(markdown-it@14.1.1)':
@@ -9315,6 +9331,10 @@ snapshots:
   '@stablelib/base64@1.0.1': {}
 
   '@standard-schema/spec@1.1.0': {}
+
+  '@svelte-put/cloudflare-turnstile@1.2.0(svelte@5.55.5(@typescript-eslint/types@8.59.2))':
+    dependencies:
+      svelte: 5.55.5(@typescript-eslint/types@8.59.2)
 
   '@sveltejs/acorn-typescript@1.0.9(acorn@8.16.0)':
     dependencies:

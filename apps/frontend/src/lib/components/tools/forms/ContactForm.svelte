@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { page } from '$app/state';
+	import { turnstile } from '@svelte-put/cloudflare-turnstile';
+	import { PUBLIC_TURNSTILE_SITE_KEY } from '$env/static/public';
+
+	let token = $state('');
 </script>
 
 <form class="contact-form" method="POST" action="/" use:enhance>
@@ -12,6 +16,7 @@
 	</div>
 
 	<div class="contact-form__fields">
+		<input type="hidden" id="token" name="token" value={token} />
 		<div class="field-group">
 			<input type="text" id="first_name" name="first_name" placeholder="Voornaam" required />
 		</div>
@@ -41,6 +46,19 @@
 				<p class="success-message">Dank voor je bericht, ik neem z.s.m. contact met je op!</p>
 			</div>
 		{/if}
+
+		<div class="field-group field-group--full">
+			<div
+				use:turnstile
+				turnstile-sitekey={PUBLIC_TURNSTILE_SITE_KEY}
+				turnstile-theme="auto"
+				turnstile-size="normal"
+				turnstile-language="en"
+				turnstile-response-field-name="turnstile"
+				turnstile-response-field
+				onturnstile={(e) => (token = e.detail.token)}
+			></div>
+		</div>
 	</div>
 </form>
 
