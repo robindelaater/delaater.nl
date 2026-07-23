@@ -1,22 +1,11 @@
 import { defineField } from "sanity";
+import { sectionHeading } from "../objects/sectionHeading";
 
 export const aboutSection = {
 	name: 'aboutSection',
 	title: 'About Section',
 	type: 'object',
 	fields: [
-		defineField({
-			name: 'title',
-			title: 'Title',
-			type: 'string',
-			initialValue: 'About section',
-			hidden: true,
-		}),
-		defineField({
-			name: 'eyebrow',
-			title: 'Eyebrow',
-			type: 'string',
-		}),
 		defineField({
 			name: 'heading',
 			title: 'Heading',
@@ -32,5 +21,19 @@ export const aboutSection = {
 			title: 'Image',
 			type: 'image',
 		}),
+		defineField({
+			name: 'imageLabel',
+			title: 'Image label',
+			type: 'string',
+		})
 	],
+	preview: {
+		select: {
+			title: 'heading'
+		},
+		prepare: ({ title }) => ({
+			title: 'About section',
+			subtitle: title
+		})
+	}
 }

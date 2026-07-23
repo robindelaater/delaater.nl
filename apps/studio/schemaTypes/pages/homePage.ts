@@ -1,4 +1,5 @@
 import { defineField } from "sanity";
+import { sectionTypes } from "../sections/_index";
 
 export const homePage = {
   name: 'homePage',
@@ -14,14 +15,7 @@ export const homePage = {
 		defineField({
 			name: 'sections',
 			type: 'array',
-			of: [
-				{ type: 'heroSection' },
-				{ type: 'servicesSection' },
-				{ type: 'casesSection' },
-				{ type: 'aboutSection' },
-				{ type: 'logSection' },
-				{ type: 'contactSection' },
-			]
+			of: sectionTypes
 		}),
   ],
 };

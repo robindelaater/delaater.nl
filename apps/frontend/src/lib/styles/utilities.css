@@ -5,6 +5,10 @@
 	padding-inline: 1rem;
 }
 
+.container--sm {
+	max-width: var(--screen-md);
+}
+
 .block-spacing {
 	padding-block: var(--section-spacing-xs);
 }
@@ -24,4 +28,10 @@
 .type-gc-lg {
 	font-family: var(--font-family-base);
 	font-size: var(--font-size-body-lg);
+}
+
+.heading--xs {
+	font-family: var(--font-family-heading);
+	font-size: var(--font-size-body-sm);
+	text-transform: uppercase;
 }

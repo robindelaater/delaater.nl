@@ -1,32 +1,12 @@
 import { defineField } from "sanity";
+import { sectionHeading } from "../objects/sectionHeading";
 
 export const casesSection = {
 	name: 'casesSection',
 	title: 'Cases section',
 	type: 'object',
 	fields: [
-		defineField({
-			name: 'title',
-			title: 'Title',
-			type: 'string',
-			initialValue: 'Cases section',
-			hidden: true,
-		}),
-		defineField({
-			name: 'eyebrow',
-			title: 'Eyebrow',
-			type: 'string',
-		}),
-		defineField({
-			name: 'heading',
-			title: 'Heading',
-			type: 'string',
-		}),
-		defineField({
-			name: 'subheading',
-			title: 'Subheading',
-			type: 'string',
-		}),
+		sectionHeading,
 		defineField({
 			name: 'cases',
 			title: 'Cases',
@@ -34,4 +14,13 @@ export const casesSection = {
 			of: [{ type: 'reference', to: [{ type: 'case' }] }],
 		}),
 	],
+	preview: {
+		select: {
+			title: 'sectionHeading.title',
+		},
+		prepare: ({title}) => ({
+			title: 'Cases section',
+			subtitle: title
+		})
+	}
 };

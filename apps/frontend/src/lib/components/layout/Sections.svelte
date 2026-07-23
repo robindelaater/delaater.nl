@@ -1,10 +1,16 @@
 <script lang="ts">
+	import About from '../sections/About.svelte';
+	import Cases from '../sections/Cases.svelte';
 	import Hero from '../sections/Hero.svelte';
+	import Roadmap from '../sections/Roadmap.svelte';
 
 	const { sections = [] } = $props();
 
 	const components: Record<string, typeof Hero> = {
-		heroSection: Hero
+		heroSection: Hero,
+		casesSection: Cases,
+		roadmapSection: Roadmap,
+		aboutSection: About
 	};
 </script>
 
