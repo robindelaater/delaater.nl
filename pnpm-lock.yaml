@@ -23,6 +23,9 @@ importers:
       '@sveltejs/adapter-cloudflare':
         specifier: ^7.2.8
         version: 7.2.8(@sveltejs/kit@2.59.1(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.55.5(@typescript-eslint/types@8.59.2))(vite@8.0.12(@types/node@24.12.3)(esbuild@0.27.7)(jiti@2.7.0)(sass-embedded@1.99.0)(sass@1.99.0)(tsx@4.21.0)(yaml@2.9.0)))(svelte@5.55.5(@typescript-eslint/types@8.59.2))(typescript@6.0.3)(vite@8.0.12(@types/node@24.12.3)(esbuild@0.27.7)(jiti@2.7.0)(sass-embedded@1.99.0)(sass@1.99.0)(tsx@4.21.0)(yaml@2.9.0)))(wrangler@4.90.0(@cloudflare/workers-types@4.20260511.1))
+      groq:
+        specifier: ^6.6.0
+        version: 6.6.0
       resend:
         specifier: ^6.12.3
         version: 6.12.3
@@ -4063,6 +4066,10 @@ packages:
   groq@5.24.0:
     resolution: {integrity: sha512-YMumFhEJjROiE4czCBMbno/xbQSz/phlosTJhGM/gJg7ZiR/dqAhx5nfUUt0p7ytiRokyEFc/sHT4xKIPo6HJA==}
     engines: {node: '>=20.19 <22 || >=22.12'}
+
+  groq@6.6.0:
+    resolution: {integrity: sha512-fZwReb3ZSnIaQou9z9ft6MqByOHTSkJmRotgK7hInPpm0istlYRfEr76IwOlB5j9a03MVCgoclQJdfdH225hWA==}
+    engines: {node: '>=22.12'}
 
   gunzip-maybe@1.4.2:
     resolution: {integrity: sha512-4haO1M4mLO91PW57BMsDFf75UmwoRX0GkdD+Faw+Lr+r/OZrOCS0pIBwOL1xCKQqnQzbNFGgK2V2CpBUPeFNTw==}
@@ -10958,6 +10965,8 @@ snapshots:
   groq@3.88.1-typegen-experimental.0: {}
 
   groq@5.24.0: {}
+
+  groq@6.6.0: {}
 
   gunzip-maybe@1.4.2:
     dependencies:

@@ -73,7 +73,7 @@
 	/* Screen sizes */
 	--screen-sm: 390px;
 	--screen-md: 768px;
-	--screen-lg: 1440px;
+	--screen-lg: 1024px;
 
 	/* Spacings */
 	--spacing-base: 1rem;
@@ -85,9 +85,9 @@
 	--spacing-lg: 2rem;
 	--spacing-xl: 2.5rem;
 	--spacing-2xl: 3rem;
-	--spacing-3xl: 3.5rem;
+	--spacing-3xl: 4rem;
 
-	--section-spacing-xs: var(--spacing-md);
+	--section-spacing-xs: var(--spacing-lg);
 	--section-spacing-sm: var(--spacing-md);
 	--section-spacing-md: var(--spacing-2xl);
 	--section-spacing-lg: calc(var(--spacing-base) * 4);
@@ -109,12 +109,12 @@
 	--font-size-body-sm: calc(var(--font-size-base) * 0.875);
 	--font-size-body-lg: var(--font-size-base);
 
-	--font-size-h1: calc(var(--font-size-base) * 3);
-	--font-size-h2: calc(var(--font-size-base) * 2.5);
-	--font-size-h3: calc(var(--font-size-base) * 2);
-	--font-size-h4: calc(var(--font-size-base) * 1.5);
-	--font-size-h5: calc(var(--font-size-base) * 1.5);
-	--font-size-h6: calc(var(--font-size-base) * 1.25);
+	--font-size-h1: calc(var(--font-size-base) * 2);
+	--font-size-h2: calc(var(--font-size-base) * 1.5);
+	--font-size-h3: calc(var(--font-size-base) * 1.25);
+	--font-size-h4: calc(var(--font-size-base) * 1.125);
+	--font-size-h5: calc(var(--font-size-base) * 1.125);
+	--font-size-h6: calc(var(--font-size-base) * 1.125);
 	--font-size-eyebrow: calc(var(--font-size-base) * 0.825);
 	--font-size-subheading: calc(var(--font-size-base) * 1.25);
 
@@ -128,28 +128,28 @@
 
 		--font-size-body-lg: calc(var(--font-size-base) * 1.125);
 
-		--font-size-h1: calc(var(--font-size-base) * 4);
-		--font-size-h2: calc(var(--font-size-base) * 3);
-		--font-size-h3: calc(var(--font-size-base) * 2.5);
-		--font-size-h4: calc(var(--font-size-base) * 2);
-		--font-size-h5: calc(var(--font-size-base) * 1.5);
-		--font-size-h6: calc(var(--font-size-base) * 1.25);
+		--font-size-h1: calc(var(--font-size-base) * 3);
+		--font-size-h2: calc(var(--font-size-base) * 2.5);
+		--font-size-h3: calc(var(--font-size-base) * 2);
+		--font-size-h4: calc(var(--font-size-base) * 1.5);
+		--font-size-h5: calc(var(--font-size-base) * 1.25);
+		--font-size-h6: calc(var(--font-size-base) * 1.125);
 		--font-size-subheading: calc(var(--font-size-base) * 1.5);
 	}
 
 	@media (min-width: 1440px) {
-		--section-spacing-xs: var(--spacing-xl);
+		--section-spacing-xs: var(--spacing-3xl);
 		--section-spacing-sm: var(--spacing-2xl);
 		--section-spacing-md: var(--spacing-3xl);
 		--section-spacing-lg: calc(var(--spacing-base) * 5);
 		--section-spacing-xl: calc(var(--spacing-base) * 8);
 		--section-spacing-2xl: calc(var(--spacing-base) * 16);
 
-		--font-size-h1: calc(var(--font-size-base) * 5.5);
-		--font-size-h2: calc(var(--font-size-base) * 4);
-		--font-size-h3: calc(var(--font-size-base) * 3);
-		--font-size-h4: calc(var(--font-size-base) * 2.5);
-		--font-size-h5: calc(var(--font-size-base) * 2);
-		--font-size-h6: calc(var(--font-size-base) * 1.5);
+		--font-size-h1: calc(var(--font-size-base) * 3);
+		--font-size-h2: calc(var(--font-size-base) * 2.5);
+		--font-size-h3: calc(var(--font-size-base) * 2);
+		--font-size-h4: calc(var(--font-size-base) * 1.5);
+		--font-size-h5: calc(var(--font-size-base) * 1.25);
+		--font-size-h6: calc(var(--font-size-base) * 1.125);
 	}
 }

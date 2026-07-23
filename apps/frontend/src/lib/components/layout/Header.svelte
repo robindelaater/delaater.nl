@@ -1,86 +1,57 @@
 <script>
 	import { resolve } from '$app/paths';
+	import IconButton from '../ui/IconButton.svelte';
 </script>
 
 <header class="header">
-	<div class="header__inner container">
-		<div class="logo-wrap">
-			<a href={resolve('/')} title="Laater." class="header__logo h6">Laater.</a>
-		</div>
+	<div class="container">
+		<div class="inner">
+			<a href={resolve('/')} title="Home" class="logo"> LAATER. </a>
 
-		<nav class="header__nav" aria-label="Main navigation">
-			<a href="#" class="header__nav-item">Projecten</a>
-			<a href="#" class="header__nav-item">Logs</a>
-			<a href="#" class="header__nav-item">Contact</a>
-		</nav>
+			<nav></nav>
 
-		<div class="cta-wrap">
-			<a href="#" class="header__cta btn btn--secondary"> Contact </a>
+			<div class="button-wrap">
+				<IconButton icon="mail" />
+			</div>
 		</div>
 	</div>
 </header>
 
 <style>
 	.header {
-		padding-block: var(--spacing-md);
+		padding-block-start: var(--spacing-xl);
+		position: sticky;
+		top: 0;
+		z-index: 1000;
 
-		.header__inner {
+		.inner {
+			padding-block: var(--spacing-xs);
+			padding-inline: var(--spacing-sm);
+
+			background: rgba(232, 233, 232, 0.5);
+			border: 1px solid var(--color-black-100);
+			border-radius: var(--spacing-2xs);
+			backdrop-filter: blur(calc(var(--spacing-sm, 16px) / 2));
+
 			display: grid;
-			grid-template-columns: repeat(2, 1fr);
 			align-items: center;
+			grid-template-columns: 100px 1fr 100px;
 
 			@media (min-width: 768px) {
-				grid-template-columns: repeat(3, 1fr);
-			}
-		}
-
-		.header__logo {
-			text-decoration: none;
-			color: var(--color-black);
-		}
-
-		.header__nav {
-			display: none;
-			gap: var(--spacing-md);
-			border-radius: var(--spacing-3xs);
-			border: 0.5px solid var(--color-black-400);
-			width: fit-content;
-			margin-inline: auto;
-
-			@media (min-width: 768px) {
-				display: flex;
-			}
-
-			.header__nav-item {
-				text-decoration: none;
-				color: var(--color-black);
-				padding-block: var(--spacing-sm);
 				padding-inline: var(--spacing-md);
-
-				font-family: var(--font-family-heading);
-				text-transform: uppercase;
-				color: var(--color-black-300);
-
-				transition: color 75ms ease-in;
-
-				&:hover {
-					color: var(--color-black-500);
-				}
-
-				&:first-child {
-					padding-inline-start: var(--spacing-xl);
-				}
-
-				&:last-child {
-					padding-inline-end: var(--spacing-xl);
-				}
 			}
 		}
 
-		.cta-wrap {
+		.logo {
+			font-family: var(--font-family-heading);
+			font-size: 1.125rem;
+			font-weight: bold;
+		}
+
+		.button-wrap {
 			display: flex;
 			align-items: center;
-			justify-content: end;
+			justify-content: flex-end;
 		}
 	}
 </style>

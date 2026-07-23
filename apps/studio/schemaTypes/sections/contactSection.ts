@@ -22,10 +22,5 @@ export const contactSection = {
 			name: 'subheading',
 			type: 'text',
 		}),
-		defineField({
-			name: 'buttons',
-			type: 'array',
-			of: [{ type: 'linkButton'}]
-		}),
 	],
 }

@@ -1,5 +1,5 @@
 import { serverClient } from '$lib/cms/client.server';
-import { homePageQuery } from '$lib/cms/queries';
+import { homePageQuery } from '$lib/cms/queries/queries';
 import type { Actions } from '@sveltejs/kit';
 import { Resend } from 'resend';
 import { env } from '$env/dynamic/private';

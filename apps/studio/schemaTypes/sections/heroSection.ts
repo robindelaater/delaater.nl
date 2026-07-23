@@ -19,6 +19,11 @@ export const heroSection = {
 			name: 'subheading',
 			type: 'string',
 			validation: (Rule) => Rule.required(),
+		}),
+		defineField({
+			name: 'buttons',
+			type: 'array',
+			of: [{ type: 'button' }]
 		})
   ],
 };

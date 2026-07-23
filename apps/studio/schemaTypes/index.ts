@@ -9,8 +9,7 @@ import { aboutSection } from "./sections/aboutSection";
 import { casesSection } from "./sections/casesSection";
 import { logSection } from "./sections/logSection";
 import { contactSection } from "./sections/contactSection";
-
-import { linkButton } from "./objects/linkButton";
+import objects from "./objects/_index";
 
 
 export const schemaTypes = [
@@ -30,5 +29,5 @@ export const schemaTypes = [
 	contactSection,
 
 	// objects
-	linkButton,
+	...objects
 ]

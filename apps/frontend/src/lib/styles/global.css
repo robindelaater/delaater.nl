@@ -4,9 +4,12 @@
 @import './utilities.css' layer(utilities);
 
 body {
+	position: relative;
 	font-family: var(--font-family-base);
-	font-size: var(--font-size-base);
+	font-size: 16px;
 	line-height: var(--line-height-base);
+	color: var(--color-black);
+	min-height: 100lvh;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {

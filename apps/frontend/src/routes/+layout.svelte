@@ -6,6 +6,7 @@
 
 	import { register } from 'swiper/element/bundle';
 	import { onMount } from 'svelte';
+	import Pattern from '$lib/components/ui/Pattern.svelte';
 
 	let { children } = $props();
 
@@ -22,3 +23,4 @@
 <Header />
 {@render children()}
 <Footer />
+<Pattern />
