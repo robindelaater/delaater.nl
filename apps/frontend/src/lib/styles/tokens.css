@@ -75,6 +75,12 @@
 	--screen-md: 768px;
 	--screen-lg: 1024px;
 
+	/* Grid pattern: container content width split into N columns.
+	   N must be even so the centered container's content edges stay
+	   a whole number of cells from the viewport-centered grid line. */
+	--grid-columns: 12;
+	--grid-cell: calc((min(100vw, var(--screen-lg)) - 2rem) / var(--grid-columns));
+
 	/* Spacings */
 	--spacing-base: 1rem;
 	--spacing-3xs: 0.125rem;
@@ -119,6 +125,8 @@
 	--font-size-subheading: calc(var(--font-size-base) * 1.25);
 
 	@media (min-width: 768px) {
+		--grid-columns: 16;
+
 		--section-spacing-xs: var(--spacing-md);
 		--section-spacing-sm: var(--spacing-lg);
 		--section-spacing-md: var(--spacing-2xl);
@@ -137,7 +145,7 @@
 		--font-size-subheading: calc(var(--font-size-base) * 1.5);
 	}
 
-	@media (min-width: 1440px) {
+	@media (min-width: 1024px) {
 		--section-spacing-xs: var(--spacing-3xl);
 		--section-spacing-sm: var(--spacing-2xl);
 		--section-spacing-md: var(--spacing-3xl);

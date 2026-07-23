@@ -19,7 +19,7 @@
 
 <style>
 	.header {
-		padding-block-start: var(--spacing-xl);
+		padding-block-start: var(--spacing-lg);
 		position: sticky;
 		top: 0;
 		z-index: 1000;

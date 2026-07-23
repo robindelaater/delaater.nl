@@ -2,12 +2,7 @@
 	max-width: var(--screen-lg);
 	width: 100%;
 	margin-inline: auto;
-
-	padding-inline: calc(var(--spacing-sm) * 2.125);
-
-	@media (min-width: 1024px) {
-		padding-inline: var(--spacing-lg);
-	}
+	padding-inline: 1rem;
 }
 
 .block-spacing {
