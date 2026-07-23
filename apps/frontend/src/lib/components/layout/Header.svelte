@@ -11,7 +11,7 @@
 			<nav></nav>
 
 			<div class="button-wrap">
-				<IconButton icon="mail" />
+				<IconButton href="mailto:robin@delaater.com" icon="mail" />
 			</div>
 		</div>
 	</div>
