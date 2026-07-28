@@ -9,7 +9,7 @@
 		inset: 0;
 		z-index: -1;
 		pointer-events: none;
-		height: calc(100% + var(--grid-cell / 2));
+		height: calc(100% + var(--grid-cell) / 2);
 		top: calc(-1 * var(--grid-cell) / 2);
 
 		background-image:
