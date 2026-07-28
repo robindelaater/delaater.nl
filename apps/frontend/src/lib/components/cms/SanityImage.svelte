@@ -6,13 +6,14 @@
 		alt?: string;
 		width?: number;
 		height?: number;
+		classes?: string;
 	}
 
-	let { source, alt = '', width, height }: SanityImageProps = $props();
+	let { source, alt = '', width, height, classes = '' }: SanityImageProps = $props();
 
 	let imageUrl = $derived(urlFor(source, width, height));
 </script>
 
 {#if imageUrl}
-	<img src={imageUrl} {alt} {width} {height} />
+	<img class={classes} src={imageUrl} {alt} {width} {height} />
 {/if}

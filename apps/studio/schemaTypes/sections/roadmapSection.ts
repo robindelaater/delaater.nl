@@ -5,7 +5,7 @@ export const roadmapSection = defineType({
   name: 'roadmapSection',
   type: 'object',
   fields: [
-    sectionHeading,
+		sectionHeading,
     defineField({
       name: 'items',
       type: 'array',

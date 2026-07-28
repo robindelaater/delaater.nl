@@ -1,8 +1,13 @@
 import { defineField, defineType } from "sanity";
+import { linkFields } from "../linkFields";
 
 export const button = defineType({
 	name: 'button',
 	type: 'object',
+	options: {
+		collapsible: true,
+		columns: 2,
+	},
 	fields: [
 		defineField({
 			name: 'variant',
@@ -47,27 +52,9 @@ export const button = defineType({
 				]
 			}
 		}),
-		defineField({
-			name: 'linkType',
-			type: 'string',
-			options: {
-				list: [
-					{ title: 'internal', value: 'internal' },
-					{ title: 'external', value: 'external' },
-				]
-			},
-			initialValue: 'external'
-		}),
-		defineField({
-			name: 'internalLink',
-			type: 'reference',
-			to: [{ type: 'homePage'}],
-			hidden: ({parent}) => ['external'].includes(parent.linkType)
-		}),
-		defineField({
-			name: 'externalLink',
-			type: 'string',
-			hidden: ({parent}) => ['internal'].includes(parent.linkType)
-		})
-	]
+		...linkFields
+	],
+	initialValue: {
+		linkType: 'external'
+	}
 })

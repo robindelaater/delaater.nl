@@ -1,13 +1,44 @@
 <script lang="ts">
 	type Props = {
-		href?: string;
 		label: string;
 		icon?: string;
 		variant?: 'black' | 'white' | 'orange' | 'yellow';
 		style?: 'filled' | 'outline';
+		linkType?: 'internal' | 'external' | 'contact';
+		externalLink?: string;
+		internalLink?: object;
 	};
 
-	const { href, label, icon, variant = 'black', style = 'filled' }: Props = $props();
+	const {
+		label,
+		icon,
+		variant = 'black',
+		style = 'filled',
+		linkType,
+		externalLink,
+		internalLink
+	}: Props = $props();
+
+	let link: string | undefined = $state();
+
+	$effect(() => {
+		if (linkType === 'external') {
+			link = externalLink;
+
+			return;
+		}
+
+		if (linkType === 'internal') {
+			console.log(internalLink);
+			return;
+		}
+
+		if (linkType === 'contact') {
+			link = 'mailto:robin@delaater.com';
+
+			return;
+		}
+	});
 </script>
 
 {#snippet buttonContent(label, iconClass)}
@@ -17,8 +48,8 @@
 	<div class="label">{label}</div>
 {/snippet}
 
-{#if href}
-	<a {href} class="btn btn--{variant} btn--{style}">
+{#if link}
+	<a href={link} class="btn btn--{variant} btn--{style}">
 		{@render buttonContent(label, icon)}
 	</a>
 {:else}

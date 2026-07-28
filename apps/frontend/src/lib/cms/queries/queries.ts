@@ -1,6 +1,7 @@
+import groq from "groq";
 import { sections } from "./sections";
 
-export const homePageQuery = `
+export const homePageQuery = groq`
 	*[_type == 'homePage'] {
 		title,
 		sections[]{
@@ -8,3 +9,15 @@ export const homePageQuery = `
 		},
 	}
 `;
+
+export const footerQuery = groq`*[_type == 'footer'][0]{
+	menu->{
+		name,
+		menuItems[]
+	},
+	logo,
+	ctaHeading,
+	ctaContent,
+	ctaButton,
+	companyDetails[]
+}`

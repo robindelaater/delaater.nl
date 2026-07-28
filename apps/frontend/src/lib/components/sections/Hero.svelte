@@ -14,14 +14,8 @@
 
 			{#if section.buttons}
 				<div class="buttons">
-					{#each section.buttons as { linkType, internalLink, externalLink, label, icon, variant, style }, index (index)}
-						<Button
-							href={linkType === 'external' ? externalLink : internalLink}
-							{icon}
-							{label}
-							{variant}
-							{style}
-						/>
+					{#each section.buttons as button, index (index)}
+						<Button {...button} />
 					{/each}
 				</div>
 			{/if}

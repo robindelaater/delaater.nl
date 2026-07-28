@@ -5,12 +5,12 @@ import { homePage } from "./pages/homePage";
 
 import objects from "./objects/_index";
 import { sections } from "./sections/_index";
+import { documents } from "./documents/_index";
 
 
 export const schemaTypes = [
 	// documents
-	caseType,
-	logType,
+	...documents,
 
 	// pages
 	homePage,

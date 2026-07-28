@@ -1,36 +1,42 @@
 <script>
+	import Link from '../cms/Link.svelte';
+	import SanityImage from '../cms/SanityImage.svelte';
 	import Button from '../ui/Button.svelte';
+
+	const { footer } = $props();
 </script>
 
 <footer class="footer block-spacing">
 	<div class="container">
-		<div class="inner">
-			<nav>
-				<a href="#" class="nav-item type-h-sm">My work</a>
-				<a href="#" class="nav-item type-h-sm">Logs<span class="subtext type-h-xs">7</span></a>
-				<a href="#" class="nav-item type-h-sm">How I work</a>
-				<a href="#" class="nav-item type-h-sm">About me</a>
-				<a href="#" class="nav-item type-h-sm">Contact</a>
-			</nav>
+		<div class="inner {!footer.menu ? 'no-menu' : null}">
+			{#if footer.menu}
+				<nav>
+					{#each footer.menu?.menuItems as menuItem, index (index)}
+						<Link element="a" classes="nav-item type-h-sm" label={menuItem.label} {...menuItem}>
+							{menuItem.label}
+						</Link>
+					{/each}
+				</nav>
+			{/if}
 
 			<div class="columns">
 				<div class="cta-column">
 					<div class="text-wrap">
-						<h5>Thanks for checking out my site</h5>
+						<h5>{footer.ctaHeading}</h5>
 						<div class="type-gc">
-							I’m available for new projects starting next month. Have something you need my help
-							with? Or have an idea you want to discuss?
+							{footer.ctaContent}
 						</div>
 					</div>
-					<Button label="Send me a message" icon="mail" variant="orange" />
+					<Button {...footer.ctaButton} />
 				</div>
 
 				<div class="logo-column">
-					<img class="logo" src="/logo-dark.svg" alt="LAATER. logo" />
+					<SanityImage classes="logo" source={footer.logo} />
 
 					<ul class="company-details">
-						<li class="type-h-xs">KVK: 42047872</li>
-						<li class="type-h-xs">BTW: NL005456478B58</li>
+						{#each footer.companyDetails as item, index (index)}
+							<li class="type-h-xs">{item}</li>
+						{/each}
 					</ul>
 				</div>
 			</div>
@@ -64,6 +70,10 @@
 			@media (min-width: 768px) {
 				padding-block: var(--spacing-lg) var(--spacing-3xl);
 				padding-inline: var(--spacing-3xl);
+
+				&.no-menu {
+					padding-block: var(--spacing-3xl);
+				}
 			}
 		}
 
@@ -77,14 +87,10 @@
 				display: flex;
 			}
 
-			.nav-item {
+			:global .nav-item {
 				display: flex;
 				align-items: center;
 				gap: var(--spacing-2xs);
-
-				.subtext {
-					align-self: flex-start;
-				}
 			}
 		}
 
@@ -117,7 +123,7 @@
 			flex-flow: column;
 			gap: var(--spacing-lg);
 
-			.logo {
+			:global .logo {
 				width: 100%;
 			}
 

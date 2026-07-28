@@ -8,7 +8,7 @@
 	import Pattern from '$lib/components/ui/Pattern.svelte';
 	import SeoTags from '$lib/components/SeoTags.svelte';
 
-	let { children } = $props();
+	let { data, children } = $props();
 
 	onMount(() => {
 		register();
@@ -32,5 +32,5 @@
 
 <Header />
 {@render children()}
-<Footer />
+<Footer footer={data.footer} />
 <Pattern />

@@ -1,7 +1,9 @@
 import { button } from "./button";
+import { link } from "./link";
 
 const objects = [
-	button
+	button,
+	link
 ]
 
 export default objects
