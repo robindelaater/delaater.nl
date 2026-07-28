@@ -25,9 +25,13 @@
 	.about {
 		.inner {
 			display: flex;
-			flex-flow: row;
+			flex-flow: column;
 			align-items: center;
 			gap: var(--spacing-lg);
+
+			@media (min-width: 768px) {
+				flex-flow: row;
+			}
 		}
 
 		.content-wrap {
@@ -37,9 +41,16 @@
 		}
 
 		.image-wrap {
-			max-width: 250px;
 			overflow: hidden;
 			border-radius: var(--spacing-2xs);
+
+			@media (min-width: 768px) {
+				max-width: 200px;
+			}
+
+			@media (min-width: 1024px) {
+				max-width: 250px;
+			}
 
 			position: relative;
 

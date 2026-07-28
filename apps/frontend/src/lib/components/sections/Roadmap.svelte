@@ -32,8 +32,11 @@
 
 		.blocks {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
 			gap: var(--spacing-sm);
+
+			@media (min-width: 1024px) {
+				grid-template-columns: repeat(3, 1fr);
+			}
 		}
 
 		.block {
