@@ -30,8 +30,14 @@
 	font-size: var(--font-size-body-lg);
 }
 
-.heading--xs {
+.type-h-xs {
 	font-family: var(--font-family-heading);
 	font-size: var(--font-size-body-sm);
+	text-transform: uppercase;
+}
+
+.type-h-sm {
+	font-family: var(--font-family-heading);
+	font-size: var(--font-size-body);
 	text-transform: uppercase;
 }

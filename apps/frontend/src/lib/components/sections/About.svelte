@@ -14,7 +14,7 @@
 			<div class="image-wrap">
 				<SanityImage source={section.image} />
 				<div class="overlay">
-					<div class="label heading--xs">{section.imageLabel}</div>
+					<div class="label type-h-xs">{section.imageLabel}</div>
 				</div>
 			</div>
 		</div>

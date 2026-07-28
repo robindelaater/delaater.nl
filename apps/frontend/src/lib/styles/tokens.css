@@ -2,6 +2,7 @@
 	/* Colors */
 	--color-white-500: #ffffff;
 
+	--color-black-50-50: #E8E9E880;
 	--color-black-100: #e8e9e8;
 	--color-black-200: #d2d3d3;
 	--color-black-300: #777b7a;
@@ -92,6 +93,7 @@
 	--spacing-xl: 2.5rem;
 	--spacing-2xl: 3rem;
 	--spacing-3xl: 4rem;
+	--spacing-4xl: 5.5rem;
 
 	--section-spacing-xs: var(--spacing-lg);
 	--section-spacing-sm: var(--spacing-md);

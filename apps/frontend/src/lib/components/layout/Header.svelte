@@ -28,10 +28,10 @@
 			padding-block: var(--spacing-xs);
 			padding-inline: var(--spacing-sm);
 
-			background: rgba(232, 233, 232, 0.5);
+			background: var(--color-black-50-50);
 			border: 1px solid var(--color-black-100);
 			border-radius: var(--spacing-2xs);
-			backdrop-filter: blur(calc(var(--spacing-sm, 16px) / 2));
+			backdrop-filter: blur(var(--spacing-xs));
 
 			display: grid;
 			align-items: center;
