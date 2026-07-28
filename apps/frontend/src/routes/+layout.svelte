@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '$lib/styles/global.css';
-	import favicon from '$lib/assets/favicon.svg';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
 
@@ -25,6 +24,8 @@
 	<link rel="manifest" href="/site.webmanifest" />
 
 	<link href="https://dev.iconly.io/public/g8UQwvcdhfKm/iconly.css" rel="stylesheet" />
+
+	<title>LAATER. - Web development services</title>
 
 	<SeoTags />
 </svelte:head>
