@@ -7,6 +7,7 @@
 	import { register } from 'swiper/element/bundle';
 	import { onMount } from 'svelte';
 	import Pattern from '$lib/components/ui/Pattern.svelte';
+	import SeoTags from '$lib/components/SeoTags.svelte';
 
 	let { children } = $props();
 
@@ -24,6 +25,8 @@
 	<link rel="manifest" href="/site.webmanifest" />
 
 	<link href="https://dev.iconly.io/public/g8UQwvcdhfKm/iconly.css" rel="stylesheet" />
+
+	<SeoTags />
 </svelte:head>
 
 <Header />
