@@ -42,7 +42,7 @@
 			</div>
 		</div>
 
-		<a class="source-link" href="https://github.com/robindelaater/delaater.nl">
+		<a class="source-link" href="https://github.com/robindelaater/delaater.nl" target="_blank">
 			View source on Github <i class="icon icon-arrow-outward"></i>
 		</a>
 	</div>
